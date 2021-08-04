@@ -3,7 +3,6 @@ kind: Application
 metadata:
   name: devops-paradox
   namespace: argocd
-  environment: staging
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

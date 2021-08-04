@@ -3,7 +3,6 @@ kind: Application
 metadata:
   name: argocd-15-min
   namespace: argocd
-  environment: staging
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
