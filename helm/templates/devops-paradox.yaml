@@ -10,7 +10,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/vfarcic/devops-paradox.git
+    repoURL: https://github.com/FatmaBn/devops-paradox.git
     targetRevision: HEAD
     path: helm
     helm:
