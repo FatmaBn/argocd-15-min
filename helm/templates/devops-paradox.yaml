@@ -14,7 +14,7 @@ spec:
     targetRevision: HEAD
     path: helm
     helm:
-      values: 
+      values: | 
         image:
           tag: latest
       version: v3
