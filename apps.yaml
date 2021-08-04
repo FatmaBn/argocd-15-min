@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-paradox
+  name: argocd-15-min
   namespace: argocd
   environment: staging
   finalizers:
@@ -11,7 +11,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/vfarcic/devops-paradox.git
+    repoURL: https://github.com/vfarcic/argocd-15-min.git
     targetRevision: HEAD
     path: helm
    
