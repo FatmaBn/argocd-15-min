@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devops-paradox
+  namespace: argocd
+  environment: staging
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+
+  # Source of the application manifests
+  source:
+    repoURL: https://github.com/vfarcic/devops-paradox.git
+    targetRevision: HEAD
+    path: helm
+   
+  # Destination cluster and namespace to deploy the application
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: productoon
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
